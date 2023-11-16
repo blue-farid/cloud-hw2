@@ -1,0 +1,28 @@
+version: '3.3'
+
+services: 
+
+  weather-service:
+    image: bluefarid/weather-service:latest
+    build:
+      context: .
+    environment:
+      - REDIS_PORT=6379
+      - SERVER_PORT=8080
+      - TOKEN=877e2b0345mshf346df335b909edp1cf5d6jsn40d5c69bbac0
+      - RAPID_API=https://weatherapi-com.p.rapidapi.com/current.json
+      - WEATHER_API=weatherapi-com.p.rapidapi.com
+      - REDIS_TIME=3000
+      - REDIS_HOST=redis-service
+    ports:
+      - 8080:8080
+
+  redis-service:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
