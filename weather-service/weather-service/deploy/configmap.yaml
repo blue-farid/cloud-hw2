@@ -5,8 +5,8 @@ metadata:
 data:
   REDIS_PORT: "6379"
   SERVER_PORT: "8080"
-  TOKEN: "877e2b0345mshf346df335b909edp1cf5d6jsn40d5c69bbac0"
+  TOKEN: "b297151e75d344b4973191000231811"
   RAPID_API: "https://weatherapi-com.p.rapidapi.com/current.json"
-  WEATHER_API: "https://weatherapi-com.p.rapidapi.com"
+  WEATHER_API: "weatherapi-com.p.rapidapi.com"
   REDIS_TIME: "3000"
   REDIS_HOST: "redis-service.default"

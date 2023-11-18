@@ -6,6 +6,6 @@ import java.io.Serializable;
 
 @Data
 public class CurrentDto implements Serializable {
-    private String tempC;
-    private String tempF;
+    private String temp_c;
+    private String temp_f;
 }
