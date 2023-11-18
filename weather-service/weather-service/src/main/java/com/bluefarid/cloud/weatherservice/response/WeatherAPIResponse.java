@@ -12,5 +12,6 @@ import java.io.Serializable;
 public class WeatherAPIResponse implements Serializable {
     private LocationDto location;
     private CurrentDto current;
+    private String podIp;
     private boolean cached;
 }
