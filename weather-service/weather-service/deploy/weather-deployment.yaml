@@ -15,7 +15,7 @@ spec:
       containers:
       - name: weather-service
         image: bluefarid/weather-service:1.0.0
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
           - containerPort: 8080
         envFrom:

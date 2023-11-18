@@ -22,7 +22,7 @@ public class WeatherService {
         if (Objects.isNull(weatherAPIResponse))
             weatherAPIResponse = gateway.weatherAPIResponse(latAndLong);
         redisUtil.save(latAndLong, weatherAPIResponse);
-        return weatherAPIResponse.setPodIp(Inet4Address.getLocalHost().getHostAddress());
+        return weatherAPIResponse;
     }
 
 }
