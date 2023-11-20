@@ -8,6 +8,7 @@ import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
 import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.util.Objects;
 
 @Service
@@ -22,7 +23,7 @@ public class WeatherService {
         if (Objects.isNull(weatherAPIResponse))
             weatherAPIResponse = gateway.weatherAPIResponse(latAndLong);
         redisUtil.save(latAndLong, weatherAPIResponse);
-        return weatherAPIResponse;
+        return weatherAPIResponse.setPodIp(InetAddress.getLocalHost().getHostName());
     }
 
 }
